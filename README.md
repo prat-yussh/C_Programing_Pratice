@@ -16,7 +16,7 @@ Here are some of the areas I'm focusing on:
 ## How to Use This Repository
 1. Clone the repository:
    ```bash
-   https://github.com/pratyush3112/C_Programing_Pratice.git
+   https://github.com/prat-yussh/C_Programing_Pratice.git
    ```
 2. Explore the files and review the code examples.
 3. Try solving the practice questions on your own before checking the solutions.
