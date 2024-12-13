@@ -6,20 +6,33 @@ Write a program to check whether a given number is prime or not using loops
 #include <stdio.h>
 int main()
 {
-     int num;
+    int num, prime = 0;
     printf("Enter a number:");
     scanf("%d", &num);
 
-    for(int i=1;i<=num;i++)
+    if (num == 0 || num == 1)
     {
-        if(num%1==0 && num%num==0 && num%i!=0)
+        prime = 1;
+    }
+    else
+    {
+
+        for (int i = 2; i < num; i++)
         {
-            printf("prime number");
+            if (num % i == 0 && num != 2)
+            {
+                prime = 1;
+            }
         }
-        else
-        {
-            printf("not prime number");
-        }
+    }
+
+    if (prime)
+    {
+        printf("The number %d is not prime", num);
+    }
+    else
+    {
+        printf("The number %d is prime", num);
     }
 
     return 0;
