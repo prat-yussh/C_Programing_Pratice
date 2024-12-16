@@ -14,9 +14,9 @@ if(n==0 || n==1)
 }
 else
 {
-    int add=sum(n)+sum(n-1);
-    printf("The sum of first 'n' natural numbers is:%d", add);
-    return add;
+    // int add=sum(n)+sum(n-1);
+    // printf("The sum of first 'n' natural numbers is:%d", add);
+    return sum(n)+sum(n-1);
 }
 }
 
