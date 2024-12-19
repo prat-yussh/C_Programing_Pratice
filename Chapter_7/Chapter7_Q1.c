@@ -27,7 +27,7 @@ int main() {
     } else if (p1 > p2) {
         printf("p1 points to a higher memory address than p2.\n");
     } else {
-        printf("p1 and p2 point to the same memory address.\n");
+        printf("p1 and p2 point to the same memory adddress.\n");
     }
 
     return 0;
