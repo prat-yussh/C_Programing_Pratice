@@ -16,7 +16,7 @@ void ChangeTo10Times(int a)
 
 int main()
 {
-    int a=10;
+    int a=100;
     printf("The value of a %d\n", a);
     ChangeTo10Times(a);
     printf("The value of a %d", a);
