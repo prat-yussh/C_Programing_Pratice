@@ -23,7 +23,7 @@ int main() {
 
     // 4. Comparison of two pointer variables
     if (p1 < p2) {
-        printf("p1 points to a lower memory address than p2.\n");
+        printf("p1 points to a lower memory adddress than p2.\n");
     } else if (p1 > p2) {
         printf("p1 points to a higher memory address than p2.\n");
     } else {
