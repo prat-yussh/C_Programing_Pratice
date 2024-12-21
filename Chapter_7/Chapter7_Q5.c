@@ -19,7 +19,7 @@ int Array_Reversse(int arr[])
     if(end>start)
     {
         start=end;
-        // end=start;
+        // endd=start;
         start++;
         // end--;
         printf("%d", *start);
