@@ -10,7 +10,7 @@ int main()
     int arr[10]={1,2,3,4,5,6,7,8,9,10};
     int* ptr=arr;
 
-    printf("Here thhe ptr points to the first element ptr=%d\n", *ptr);
+    printf("Here thhe ptr points to the firdst element ptr=%d\n", *ptr);
     ptr=ptr+2;
 
     printf("Here the ptr points to the 3rd element after addition '(ptr+2)' ptr=%d", *ptr);
