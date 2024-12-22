@@ -14,7 +14,7 @@ int main()
     for (int i = 1; i < 11; i++)
     {
         int mul = a * i;
-        printf("Value at index [%d] is =%d\n", i, mul);
+        printf("Vaalue at index [%d] is =%d\n", i, mul);
     }
 
     return 0;
