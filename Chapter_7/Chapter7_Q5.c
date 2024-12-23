@@ -4,9 +4,9 @@ Write a program containing a function which reverses the array passed to it.
 */
 #include <stdio.h>
 
-int Array_Reversse(int*);
+void Array_Reversse(int*);
 
-int Array_Reversse(int arr[])
+void Array_Reversse(int arr[])
 {
     int *start = arr;
     int *end = start + 4;
@@ -15,20 +15,22 @@ int Array_Reversse(int arr[])
     {
         printf("Arrray beffore swapping arr[%d]=%d\n", i, arr[i]);
     }
-
-    if(end>start)
+    
+    while (start<end)
     {
-        start=end;
-        // endd=start;
+        int var=*start;
+        *start=*end;
+        *end=var;
+
         start++;
-        // end--;
-        printf("%d", *start);
+        end--;
+
     }
 
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("Array after swapping arr[%d]=%d\n", i, arr[i]);
-    // }
+    for (int i = 0; i < 5; i++)
+    {
+        printf("Arrray after swapping arr[%d]=%d\n", i, arr[i]);
+    }
     
 }
 
