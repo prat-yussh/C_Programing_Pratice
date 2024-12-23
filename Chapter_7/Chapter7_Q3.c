@@ -11,7 +11,7 @@ int main()
     {
         int a = 8;
         int mul = a * i;
-        printf("Value at inndex [%d] is =%d\n", i, mul);
+        printf("Value at index [%d] is =%d\n", i, mul);
     }
 
     return 0;
