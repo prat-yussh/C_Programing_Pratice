@@ -7,6 +7,6 @@ and 9 respectively.
 int main()
 {
     int arr[3][10];
-    
+    scanf("%D", &arr);
     return 0;
 }
