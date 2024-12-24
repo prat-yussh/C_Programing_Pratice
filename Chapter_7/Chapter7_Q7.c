@@ -12,7 +12,7 @@ int main()
     scanf("%d", &arr);
     for (int i = 0; i < a7; i++)
     {
-        printf("the table");
+        printf("the table %d * %d = %d", num, i , num*i);
     }
     
     return 0;
