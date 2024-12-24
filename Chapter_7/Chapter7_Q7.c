@@ -10,5 +10,10 @@ int main()
     int arr[3][10];
     printf("Enter a number");
     scanf("%d", &arr);
+    for (int i = 0; i < a7; i++)
+    {
+        printf("the table");
+    }
+    
     return 0;
 }
