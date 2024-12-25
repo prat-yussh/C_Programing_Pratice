@@ -5,9 +5,9 @@ and 9 respectively.
 */
 #include <stdio.h>
 
-int mul(int);
+// int mul(int x);
 
-int mul(int x)
+void mul(int x[3][10])
 {
     for (int i = 2; i < 10; i++)
     {
