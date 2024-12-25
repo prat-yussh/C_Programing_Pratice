@@ -5,40 +5,42 @@ and 9 respectively.
 */
 #include <stdio.h>
 
-// int mul(int x);
-
-void mul(int x[3][10])
-{
-    for (int i = 2; i < 10; i++)
-    {
-        if (i == 2)
-        {
-            for (int j = 1; j < 11; j++)
-            {
-                printf("%d * %d = %d\n", i, j, i * j);
-            }
-        }
-        else if (i == 7)
-        {
-            for (int j = 1; j < 11; j++)
-            {
-                printf("%d * %d = %d\n", i, j, i * j);
-            }
-        }
-        else if (i == 9)
-        {
-            for (int j = 1; j < 11; j++)
-            {
-                printf("%d * %d = %d\n", i, j, i * j);
-            }
-        }
-    }
-}
-
 int main()
 {
     int arr[3][10];
-    mul(arr[3][10]);
+    int mul[] = {2, 7, 9};
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            arr[i][j] = mul[i] * (j + 1);
+        }
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 10; j++)
+        {
+            printf("The value of arr[%d][%d] is %d\n", i, j, arr[i][j]);
+        }
+        printf("\n");
+    }
 
     return 0;
 }
+// #include <stdio.h>
+
+// int main()
+// {
+//     int arr[3][10];
+//     int mul[3]={2,7,9};
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 10; j++)
+//         {
+//             arr[i][j]=mul   
+//         }
+        
+//     }
+//     return 0;
+// }
