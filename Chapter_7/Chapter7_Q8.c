@@ -35,5 +35,9 @@ int main()
             printf("\n");
         }
     }
+    else
+    {
+        printf("Enter a positive number");
+    }
     return 0;
 }
