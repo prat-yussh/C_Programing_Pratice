@@ -13,7 +13,7 @@ int main()
         {
             for (int k = 0; k < 2; k++)
             {
-                printf("arr[%d][%d][%d]=%u\n", i, j, k, arr[i][j][k]);
+                printf("arr[%d][%d][%d]=%u\n", i, j, k, &arr[i][j][k]);
             }
             
         }
