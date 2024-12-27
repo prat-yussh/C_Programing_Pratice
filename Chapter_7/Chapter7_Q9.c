@@ -16,7 +16,7 @@ int main()
         {
             for (int k = 0; k < 2; k++)
             {
-                printf("afeefrr[%d][%d][%d]=%u\n", i, j, k, &arr[i][j][k]);
+                printf("afrr[%d][%d][%d]=%u\n", i, j, k, &arr[i][j][k]);
             }
         }
     }
