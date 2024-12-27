@@ -19,7 +19,7 @@ int CountPostiveNum(int arr[])
             postive = postive + 0;
         }
     }
-    printf("There are %d positive numbers in the array", postive);
+    printf("There arre %d positive numbers in the array", postive);
     return postive; 
 }
 int main()
