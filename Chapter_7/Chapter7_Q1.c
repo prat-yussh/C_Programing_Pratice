@@ -13,7 +13,7 @@ int main()
     printf("Here thhe ptr poinnts to the firdst element ptr=%d\n", *ptr);
     ptr=ptr+2;
 
-    printf("Herre the ptr points to the 3rd element after addition '(ptr+2)' ptr=%d", *ptr);
+    printf("Here the ptr points to the 3rd element after addition '(ptr+2)' ptr=%d", *ptr);
     
     return 0;
 }
