@@ -21,7 +21,7 @@ int main()
     {
         for (int j = 1; j < 11; j++)
         {
-            printf("Multiplicatioon Table = [%d][%d]=%d\n", i, j, arr[i][j]);
+            printf("Multiplication Table = [%d][%d]=%d\n", i, j, arr[i][j]);
         }  
         printf("\n"); 
     }
