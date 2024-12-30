@@ -9,7 +9,7 @@ int main()
 {
     int arr[3][10];
     int num;
-    printf("Enter how many mulltiplication table you need:");
+    printf("Enter how many multiplication table you need:");
     scanf("%d", &num);
     if (num > 0)
     {
