@@ -13,7 +13,7 @@ void Array_Reversse(int arr[])
 
     for (int i = 0; i < 5; i++)
     {
-        printf("Arrray beffore swapping arr[%d]=%d\n", i, arr[i]);
+        printf("Array beffore swapping arr[%d]=%d\n", i, arr[i]);
     }
     
     while (start<end)
