@@ -6,11 +6,10 @@
 int main()
 {
     // char st[]={'a','b','c','\0'};
-    char st[]="harry";
-    for(int i=0;i<5;i++)
-    {
-    printf("%c", st[i]);
+    char st[3];
+    scanf("%s", &st);
+    printf("%s", st);
 
-    }
+
     return 0;
 }
