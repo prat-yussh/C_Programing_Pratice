@@ -8,7 +8,7 @@ int main()
     // char st[]={'a','b','c','\0'};
     char st[3];
     scanf("%s", &st);
-    printf("fwe%s", st);
+    printf("fwese%s", st);
 
 
     return 0;
