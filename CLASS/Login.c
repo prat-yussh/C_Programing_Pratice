@@ -45,9 +45,14 @@ void login() {
     scanf("%s", password);
 
     for (int i = 0; i < userCount; i++) {
-        if (strcmp(users[i].id, id) == 0 && strcmp(users[i].password, password) == 0) {
-            printf("Logged in successfully as %s\n", id);
-            return;
+        if (strcmp(users[i].id, id) == 0) {
+            if (strcmp(users[i].password, password) == 0) {
+                printf("Login successful as %s\n", id);
+                return;
+            } else {
+                printf("Sorry, password incorrect.\n");
+                return;
+            }
         }
     }
     printf("Invalid ID or Password. Please try again.\n");
