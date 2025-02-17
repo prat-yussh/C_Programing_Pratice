@@ -54,7 +54,7 @@ void login() {
             }
         }
     }
-    printf("Invalid ID or Password. Please try again.\n");
+    printf("Invaalid ID or Password. Please try again.\n");
 }
 
 int main() {
