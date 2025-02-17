@@ -23,7 +23,6 @@ void registerUser() {
     printf("Enter a new Password: ");
     scanf("%s", password);
 
-    // Check if user already exists
     for (int i = 0; i < userCount; i++) {
         if (strcmp(users[i].id, id) == 0) {
             printf("User ID already exists. Please try a different ID.\n");
