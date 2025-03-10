@@ -1,67 +1,73 @@
 #include <stdio.h>
 #include <string.h>
 
-#define USERNAME "omm"
-#define PASSWORD "230301121561"
+void LCS(char *X, char *Y, int m, int n)
+{
+    int c[m + 1][n + 1];
+    char b[m + 1][n + 1];
 
-void lcs(char *X, char *Y, int m, int n);
+    for (int i = 0; i <= m; i++)
+        c[i][0] = 0;
+    for (int j = 0; j <= n; j++)
+        c[0][j] = 0;
 
-void lcs(char *X, char *Y, int m, int n) {
-    int L[m + 1][n + 1];
-
-    for (int i = 0; i <= m; i++) {
-        for (int j = 0; j <= n; j++) {
-            if (i == 0 || j == 0)
-                L[i][j] = 0;
-            else if (X[i - 1] == Y[j - 1])
-                L[i][j] = L[i - 1][j - 1] + 1;
+    for (int i = 1; i <= m; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (X[i - 1] == Y[j - 1])
+            {
+                c[i][j] = c[i - 1][j - 1] + 1;
+                b[i][j] = '\\';
+            }
+            else if (c[i - 1][j] >= c[i][j - 1])
+            {
+                c[i][j] = c[i - 1][j];
+                b[i][j] = '|';
+            }
             else
-                L[i][j] = (L[i - 1][j] > L[i][j - 1]) ? L[i - 1][j] : L[i][j - 1];
+            {
+                c[i][j] = c[i][j - 1];
+                b[i][j] = '-';
+            }
         }
     }
 
-    int index = L[m][n];
-    char lcs[index + 1];
-    lcs[index] = '\0';
+    printf("Length of LCS: %d\n", c[m][n]);
 
     int i = m, j = n;
-    while (i > 0 && j > 0) {
-        if (X[i - 1] == Y[j - 1]) {
-            lcs[index - 1] = X[i - 1];
+    int index = c[m][n];
+    char lcs[index + 1];
+    lcs[index] = '\0';
+    while (i > 0 && j > 0)
+    {
+        if (b[i][j] == '\\')
+        {
+            lcs[--index] = X[i - 1];
             i--;
             j--;
-            index--;
-        } else if (L[i - 1][j] > L[i][j - 1])
+        }
+        else if (b[i][j] == '|')
+        {
             i--;
+        }
         else
+        {
             j--;
+        }
     }
 
-    printf("Longest Common Subsequence: %s\n", lcs);
+    printf("LCS: %s\n", lcs);
 }
 
-int main() {
-    char inputUsername[20], inputPassword[20];
+int main()
+{
+    char X[] = "ABCBDAB";
+    char Y[] = "BDCABA";
+    int m = strlen(X);
+    int n = strlen(Y);
 
-    printf("Enter Username: ");
-    scanf("%s", inputUsername);
-
-    getchar();
-    printf("Enter Password: ");
-    fgets(inputPassword, sizeof(inputPassword), stdin);
-    inputPassword[strcspn(inputPassword, "\n")] = 0;
-
-    if (strcmp(inputUsername, USERNAME) == 0 && strcmp(inputPassword, PASSWORD) == 0) {
-        printf("\nLogin Successful!\n");
-        char str1[100], str2[100];
-        printf("Enter first string: ");
-        scanf("%s", str1);
-        printf("Enter second string: ");
-        scanf("%s", str2);
-        lcs(str1, str2, strlen(str1), strlen(str2));
-    } else {
-        printf("\nAccess Denied: Invalid Username or Password.\n");
-    }
+    LCS(X, Y, m, n);
 
     return 0;
 }
