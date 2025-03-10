@@ -44,7 +44,7 @@ void LCS(char *X, char *Y, int m, int n) {
 
 int main() {
     char X[] = "ABCBDAB";
-    char Y[] = "BDhCABA";
+    char Y[] = "BDCABA";
     int m = strlen(X);
     int n = strlen(Y);
 
